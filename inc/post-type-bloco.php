@@ -231,6 +231,9 @@ class Folia_Post_Type_Bloco {
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
 		  return;
 		 
+		if ( ! isset ( $post ) )
+			return;
+
 		// Não salva o campo caso seja uma revisão
 		if ( $post->post_type == 'revision' )
 			return; 
