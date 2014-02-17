@@ -48,7 +48,7 @@ and Blueprint http://www.blueprintcss.org/
    Colors
    ==========================================================================
 	
-	Pink: #de2f52
+	Red / Pink: #de2f52
 
 */
 
@@ -113,11 +113,33 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 1em;
+	font-weight: 300;
 	line-height: 1.5;
 }
 
+/* Links */
+a {
+	color: #de2f52;
+
+	-webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}
+
+a:visited {
+	color: #de2f52;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #de2f52;
+}
+
+/* Text elements */
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 0;
 }
@@ -167,6 +189,92 @@ img {
 	height: auto;
 	max-width: 100%;
 	vertical-align: top;
+}
+
+/* Buttons */
+button,
+.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 0;
+	border-radius: 1.5em;
+	color: #fff;
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+	font-size: 0.875em;
+	padding: 0.5em 1em;
+
+	-webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+
+    input::-moz-focus-inner { border:0; padding:0 }
+}
+
+button:hover,
+.button,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	background: #de2f52;
+}
+
+button:focus,
+.button,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	position: relative;
+		top: 1px;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	border: 1px solid #f2f2f2;
+	border-radius: 1.5em;
+	color: #eee;
+	font-size: 0.875em;
+	padding: 0.5em 1em;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	color: #111;
+	border: 1px solid #ddd;
+	outline: none;
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	-moz-box-sizing:    content-box;
+	box-sizing:         content-box;
+}
+
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
+
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: 3px;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 100%;
 }
 
 /* Icons */
@@ -270,6 +378,10 @@ img {
     position: absolute;
 }
 
+.site-header .social-link {
+	display: inline-block;
+	font-size: 120%;
+}
 /* ==========================================================================
    4.0 - Content
    ========================================================================== */
@@ -302,6 +414,10 @@ img {
 	margin-bottom: 1.5em;
 }
 
+.singular .entry-summary {
+	font-style: italic;
+}
+
 /* 
    4.9 - Archives
    ========================================================================== */
@@ -312,30 +428,21 @@ img {
 	padding: 1.5em;
 }
 
+.archive .hentry {
+	background: beige;
+}
+
 /* 
    4.??? - Post Type "Bloco"
    ========================================================================== */
-.type-bloco {
+
+.archive .type-bloco {
 	background: #f2f2f2;
 }
 
 /*--------------------------------------------------------------
 5.0 Navigation
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-5.1 Links
---------------------------------------------------------------*/
-a {
-	color: #de2f52;
-}
-a:visited {
-	color: #de2f52;
-}
-a:hover,
-a:focus,
-a:active {
-	color: #de2f52;
-}
 
 /*--------------------------------------------------------------
 5.2 Menus
@@ -376,9 +483,23 @@ a:active {
 .main-navigation a {
 	background: #ddd;
 	display: block;
-	padding: 0.25em 0.5em;
+	padding: 0.5em 1.25em;
 	text-decoration: none;
 }
+
+.main-navigation li a {
+	background: #eee;
+}
+
+.main-navigation li:nth-child(odd) a {
+	background: #ddd;
+}
+
+.main-navigation li a:hover {
+	background: #de2f52;
+	color: #fff;
+}
+
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	display: none;
@@ -694,4 +815,9 @@ object {
     .widget-area--sidebar {
     	width: 32%;
     }
+
+    /* Full width pages */
+	.content-area--full {
+		width: 100%;
+	}
 }
