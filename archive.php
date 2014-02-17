@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-area content-area--full">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -80,13 +80,22 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class( 'clear' ); ?>>
+					<header class="entry-header">
+						<?php if ( has_post_thumbnail() ) : ?>
+							<?php the_post_thumbnail( 'thumbnail' ); ?>
+						<?php else : ?>
+							<img class="wp-post-image" src="http://placehold.it/150&text=Imagem"/>
+						<?php endif; ?>					
+						<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+
+						<?php if ( 'post' == get_post_type() ) : ?>
+						<div class="entry-meta">
+							<?php folia_posted_on(); ?>
+						</div><!-- .entry-meta -->
+						<?php endif; ?>
+					</header><!-- .entry-header -->					
+				</article><!-- #post-## -->
 
 			<?php endwhile; ?>
 
@@ -101,5 +110,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
