@@ -31,6 +31,10 @@ function folia_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
+	if ( is_single() || is_page() ) {
+		$classes[] = 'singular';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'folia_body_classes' );
