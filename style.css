@@ -345,6 +345,10 @@ textarea {
 	content: '\e805';
 }
 
+.icon-search:before {
+	content: '\e809';
+}
+
 /* ==========================================================================
    2.0 - Structure
    ========================================================================== */
@@ -382,6 +386,8 @@ textarea {
 	display: inline-block;
 	font-size: 120%;
 }
+
+
 /* ==========================================================================
    4.0 - Content
    ========================================================================== */
@@ -407,7 +413,6 @@ textarea {
 .entry-title {
 	margin: 0;
 }
-
 
 .entry-content .wp-post-image,
 .entry-summary .wp-post-image {
@@ -799,7 +804,7 @@ object {
 	.site-header .search-form {
 		float: right;
 		text-align: right;
-		width: 68%;
+		width: 50%;
 	}
 
 	/* Main content area + sidebar area */
