@@ -83,7 +83,7 @@ class Folia_Post_Type_Bloco {
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => 5,
-			'supports'           => array( 'title', 'editor', 'thumbnail' )
+			'supports'           => array( 'title', 'editor', 'thumbnail', 'post-formats' )
 		);
 
 		register_post_type( 'bloco', $args );
