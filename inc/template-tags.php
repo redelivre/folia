@@ -131,13 +131,23 @@ add_action( 'edit_category', 'folia_category_transient_flusher' );
 add_action( 'save_post',     'folia_category_transient_flusher' );
 
 function folia_social_networks() {
-	?>
-	<ul class="social">
-		<li><a class="social-link icon icon-facebook" href="#"><span class="screen-reader-text">T</span></a></li>
-		<li><a class="social-link icon icon-pinterest" href="#"><span class="screen-reader-text">T</span></a></li>
-		<li><a class="social-link icon icon-rss" href="#"><span class="screen-reader-text">T</span></a></li>
-		<li><a class="social-link icon icon-instagram" href="#"><span class="screen-reader-text">T</span></a></li>
-		<li><a class="social-link icon icon-twitter" href="#"><span class="screen-reader-text">T</span></a></li>
-	</ul><!-- .social -->
+
+    // Social networks & RSS feed
+	$social = get_option( 'campanha_social_networks' );
+	if ( isset( $social ) && !empty( $social ) ) : ?>
+		<ul class="social">
+			<?php
+			foreach ( $social as $key => $value ) :
+				if ( ! empty( $value) ) : ?>
+					<li>
+						<a class="social-link icon-<?php echo $key; ?>" href="<?php echo esc_url( $value ); ?>"><span class="screen-reader-text"><?php echo $value; ?></span></a>
+					</li>
+				<?php
+				endif;
+			endforeach;
+			?>
+			<a class="social-link social-link-rss" href="<?php bloginfo( 'rss2_url' ); ?>"><span class="icon icon-rss"></span></a>
+		</ul><!-- .social -->
 	<?php
+	endif;
 }
