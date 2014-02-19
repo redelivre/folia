@@ -43,6 +43,7 @@ function folia_setup() {
 	// Image sizes
 	add_image_size( 'thumbnail-small', 75, 75, true );
 	add_image_size( 'feature-single', 748, 350, true );
+	add_image_size( 'feature-box', 350, 263, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

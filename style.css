@@ -82,8 +82,9 @@ and Blueprint http://www.blueprintcss.org/
         4.13 - Multisite
     5.0 - Widget area
     6.0 - Footer
-    7.0 - Events / Agenda
-    8.0 - Media queries 
+    7.0 - Map
+    8.0 - Events / Agenda
+    9.0 - Media queries 
  */
 
 
@@ -131,6 +132,7 @@ textarea {
 /* Links */
 a {
 	color: #ed4037;
+	text-decoration: none;
 
 	-webkit-transition: all 0.25s ease-out;
     -moz-transition: all 0.25s ease-out;
@@ -437,6 +439,7 @@ textarea {
 
 .entry-title {
 	margin: 0;
+	word-wrap: break-word;
 }
 
 .entry-content .wp-post-image,
@@ -452,7 +455,6 @@ textarea {
    4.9 - Archives
    ========================================================================== */
 
-.home .hentry,
 .archive .hentry,
 .search .hentry {
 	padding: 1.5em;
@@ -497,6 +499,10 @@ textarea {
 5.2 Menus
 --------------------------------------------------------------*/
 
+.navigation {
+	width: 100%;
+}
+
 .main-navigation {
 	margin-top: 3em;
 	text-transform: uppercase;
@@ -517,7 +523,6 @@ textarea {
 	clear: both;
 	display: block;
 	float: left;
-	width: 100%;
 }
 .main-navigation ul {
 	display: none;
@@ -788,7 +793,14 @@ object {
 }
 
 /* ==========================================================================
-   ?.0 - Footer
+   7.0 - Map
+   ========================================================================== */
+.map {
+	margin-bottom: 3em;
+}
+
+/* ==========================================================================
+   8.0 - Footer
    ========================================================================== */
 .site-footer {
 	background: #eaedca;
@@ -808,7 +820,7 @@ object {
 }
 
 /* ==========================================================================
-   ?.0 - Media queries
+   9.0 - Media queries
    ========================================================================== */
 
 @media all and (min-width: 36em) {
@@ -829,6 +841,36 @@ object {
 	.entry-header .wp-post-image {
 		float: left;
 		margin-right: 1em;
+	}
+
+	/* Box styles (as in News) */
+	.hentry-box {
+		float: left;
+		position: relative;
+		overflow: hidden;
+		width: 33.333%;
+	}
+
+	.hentry-box .entry-header {
+		line-height: 1.2;
+		padding: 1.5em;
+		position: absolute;
+			left: 50%;
+			top: 50%;
+		text-align: center;
+		width: 100%;
+
+		transform: translate(-50%, -50%);
+		-moz-transfrm: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+	}
+
+	.hentry-box .entry-title {
+		font-size: 1.25em;
+	}
+
+	.hentry-box .entry-meta {
+		font-size: 0.875em;
 	}
 
 	/* Widget area */
