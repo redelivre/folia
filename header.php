@@ -38,20 +38,14 @@
 	        	?>
 	        
 	        	<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-	                <img class="site-logo" src="http://placehold.it/100&text=Logo" alt="Logo <?php bloginfo ( 'name' ); ?>" />
+	                <img class="site-logo" src="<?php echo get_template_directory_uri() . '/images/logo.png'; ?>" alt="Logo <?php bloginfo ( 'name' ); ?>" />
 	            </a>
 	        	
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</div><!-- .site-branding -->
 
-			<div class="social">
-				<a class="social-link icon icon-facebook" href="#"><span class="screen-reader-text">T</span></a>
-				<a class="social-link icon icon-pinterest" href="#"><span class="screen-reader-text">T</span></a>
-				<a class="social-link icon icon-rss" href="#"><span class="screen-reader-text">T</span></a>
-				<a class="social-link icon icon-instagram" href="#"><span class="screen-reader-text">T</span></a>
-				<a class="social-link icon icon-twitter" href="#"><span class="screen-reader-text">T</span></a>
-			</div>
+			<?php folia_social_networks(); ?>
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<h1 class="menu-toggle"><?php _e( 'Menu', 'folia' ); ?></h1>

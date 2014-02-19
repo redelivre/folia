@@ -48,7 +48,12 @@ and Blueprint http://www.blueprintcss.org/
    Colors
    ==========================================================================
 	
-	Red / Pink: #de2f52
+	Red: #ed4037
+	Beige: #eaedca;
+	Blue (dark): #0e0e33
+	Blue (light): #b8e9e4
+	Pink: #e03352;
+	Yellow: #ffe954;
 
 */
 
@@ -121,7 +126,7 @@ textarea {
 
 /* Links */
 a {
-	color: #de2f52;
+	color: #ed4037;
 
 	-webkit-transition: all 0.25s ease-out;
     -moz-transition: all 0.25s ease-out;
@@ -130,13 +135,13 @@ a {
 }
 
 a:visited {
-	color: #de2f52;
+	color: #ed4037;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #de2f52;
+	color: #ed4037;
 }
 
 /* Text elements */
@@ -218,7 +223,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background: #de2f52;
+	background: #ed4037;
 }
 
 button:focus,
@@ -349,6 +354,21 @@ textarea {
 	content: '\e809';
 }
 
+/* Social networks */
+.social {
+	list-style-type: none;
+}
+
+.social li {
+	display: inline;
+}
+
+.social-link {
+	float: left;
+	font-size: 120%;
+	text-decoration: none;
+}
+
 /* ==========================================================================
    2.0 - Structure
    ========================================================================== */
@@ -382,11 +402,6 @@ textarea {
     position: absolute;
 }
 
-.site-header .social-link {
-	display: inline-block;
-	font-size: 120%;
-}
-
 
 /* ==========================================================================
    4.0 - Content
@@ -394,12 +409,6 @@ textarea {
 
 .site-content {
 	margin-bottom: 3em;
-}
-
-.social-link {
-	display: inline-block;
-	margin-right: 2px;
-	text-decoration: none;
 }
 
 /* 
@@ -445,9 +454,28 @@ textarea {
 	background: #f2f2f2;
 }
 
-/*--------------------------------------------------------------
-5.0 Navigation
---------------------------------------------------------------*/
+/* ==========================================================================
+   5.0 - Widget area
+   ========================================================================== */
+
+.widget {
+	font-size: 0.875em;
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget */
+.widget_search .search-submit {
+	display: none;
+}
+
+.widget-title {
+	text-transform: uppercase;
+}
 
 /*--------------------------------------------------------------
 5.2 Menus
@@ -501,7 +529,7 @@ textarea {
 }
 
 .main-navigation li a:hover {
-	background: #de2f52;
+	background: #ed4037;
 	color: #fff;
 }
 
@@ -633,22 +661,6 @@ textarea {
 	clear: both;
 }
 
-/*--------------------------------------------------------------
-9.0 Widgets
---------------------------------------------------------------*/
-.widget {
-	margin: 0 0 1.5em;
-}
-
-/* Make sure select elements fit in widgets */
-.widget select {
-	max-width: 100%;
-}
-
-/* Search widget */
-.widget_search .search-submit {
-	display: none;
-}
 
 /*--------------------------------------------------------------
 10.0 Content
@@ -764,8 +776,20 @@ object {
    ?.0 - Footer
    ========================================================================== */
 .site-footer {
-	background: #f2f2f2;
+	background: #eaedca;
 	padding: 1.5em 0;
+	text-align: center;
+}
+
+.site-info {
+	font-size: 0.875em;
+}
+
+.widget-area--footer + .site-info {
+	padding-top: 1.5em;
+	border-style: solid;
+	border-width: 1px 0 0;
+	border-color: #ececec;
 }
 
 /* ==========================================================================
@@ -791,6 +815,18 @@ object {
 		float: left;
 		margin-right: 1em;
 	}
+
+	/* Widget area */
+	.widget-area--footer .widget {
+		float: left;
+		padding: 1em;
+		width: 33.333%;
+	}
+
+	/* Footer */
+	.site-footer {
+		text-align: left;
+	}
 }
 
 @media all and (min-width: 55em) {
@@ -798,7 +834,7 @@ object {
 	/* Site Header */
 	.site-branding {
 		float: left;
-		max-width: 6.250em;
+		max-width: 12.5%;
 	}
 
 	.site-header .search-form {
@@ -824,5 +860,14 @@ object {
     /* Full width pages */
 	.content-area--full {
 		width: 100%;
+	}
+
+	/* Widget area */
+	.widget-area--footer .widget:nth-child(-n+2) {
+		width: 25%;
+	}
+
+	.widget-area--footer .widget:nth-child(3) {
+		width: 50%;
 	}
 }
