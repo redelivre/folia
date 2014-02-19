@@ -129,3 +129,15 @@ function folia_category_transient_flusher() {
 }
 add_action( 'edit_category', 'folia_category_transient_flusher' );
 add_action( 'save_post',     'folia_category_transient_flusher' );
+
+function folia_social_networks() {
+	?>
+	<ul class="social">
+		<li><a class="social-link icon icon-facebook" href="#"><span class="screen-reader-text">T</span></a></li>
+		<li><a class="social-link icon icon-pinterest" href="#"><span class="screen-reader-text">T</span></a></li>
+		<li><a class="social-link icon icon-rss" href="#"><span class="screen-reader-text">T</span></a></li>
+		<li><a class="social-link icon icon-instagram" href="#"><span class="screen-reader-text">T</span></a></li>
+		<li><a class="social-link icon icon-twitter" href="#"><span class="screen-reader-text">T</span></a></li>
+	</ul><!-- .social -->
+	<?php
+}
