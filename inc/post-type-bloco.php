@@ -66,9 +66,9 @@ class Folia_Post_Type_Bloco {
     static function register_post_type() {
 	  	
         $labels = array(
-			'name'               => __( 'Blocos', 'folia' ),
-			'singular_name'      => __( 'Bloco', 'folia' ),
-			'menu_name'          => 'Blocos'
+			'name'               => __( 'Blocos e Escolas de Samba', 'folia' ),
+			'singular_name'      => __( 'Bloco e Escola', 'folia' ),
+			'menu_name'          => 'Blocos e Escolas de Samba'
 		);
 
 		$args = array(
@@ -83,7 +83,8 @@ class Folia_Post_Type_Bloco {
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => 5,
-			'supports'           => array( 'title', 'editor', 'thumbnail', 'post-formats' )
+			'supports'           => array( 'title', 'editor', 'thumbnail', 'post-formats' ),
+			'taxonomies'		 => array( 'filter' )
 		);
 
 		register_post_type( 'bloco', $args );
