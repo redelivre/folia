@@ -429,6 +429,37 @@ textarea {
 	margin-bottom: 3em;
 }
 
+.hentry-box {
+	position: relative;
+	overflow: hidden;
+}
+
+.hentry-box .entry-title {
+	font-size: 1.25em;
+	line-height: 1.2;
+}
+
+.hentry-box .entry-meta {
+	font-size: 0.875em;
+}
+
+.hentry-box .entry-header {
+	padding: 1.5em;
+	position: absolute;
+		left: 50%;
+		top: 50%;
+	text-align: center;
+	width: 100%;
+
+	transform: translate(-50%, -50%);
+	-moz-transfrm: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
+.hentry-box .wp-post-image {
+	width: 100%;
+}
+
 /* 
    4.1 - Entry header
    ========================================================================== */
@@ -843,34 +874,10 @@ object {
 		margin-right: 1em;
 	}
 
-	/* Box styles (as in News) */
+	/* Box styles */
 	.hentry-box {
 		float: left;
-		position: relative;
-		overflow: hidden;
-		width: 33.333%;
-	}
-
-	.hentry-box .entry-header {
-		line-height: 1.2;
-		padding: 1.5em;
-		position: absolute;
-			left: 50%;
-			top: 50%;
-		text-align: center;
-		width: 100%;
-
-		transform: translate(-50%, -50%);
-		-moz-transfrm: translate(-50%, -50%);
-		-webkit-transform: translate(-50%, -50%);
-	}
-
-	.hentry-box .entry-title {
-		font-size: 1.25em;
-	}
-
-	.hentry-box .entry-meta {
-		font-size: 0.875em;
+		width: 50%;
 	}
 
 	/* Widget area */
@@ -919,6 +926,11 @@ object {
 		width: 100%;
 	}
 
+	/* Box styles */
+	.hentry-box {
+		width: 33.333%;
+	}
+
 	/* Widget area */
 	.widget-area--footer .widget:nth-child(-n+2) {
 		width: 25%;
@@ -926,5 +938,10 @@ object {
 
 	.widget-area--footer .widget:nth-child(3) {
 		width: 50%;
+	}
+
+	/* Footer */
+	.site-logo {
+		max-width: 85%;
 	}
 }
