@@ -19,7 +19,7 @@ function folia_paging_nav() {
 		return;
 	}
 	?>
-	<nav class="navigation paging-navigation" role="navigation">
+	<nav class="navigation paging-navigation clear" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'folia' ); ?></h1>
 		<div class="nav-links">
 
@@ -130,6 +130,11 @@ function folia_category_transient_flusher() {
 add_action( 'edit_category', 'folia_category_transient_flusher' );
 add_action( 'save_post',     'folia_category_transient_flusher' );
 
+/**
+ * Display the registered social networks
+ *
+ * @since  Folia 1.0
+ */
 function folia_social_networks() {
 
     // Social networks & RSS feed
@@ -150,4 +155,16 @@ function folia_social_networks() {
 		</ul><!-- .social -->
 	<?php
 	endif;
+}
+
+/**
+ * Display the map 
+ *
+ * @since Folia 1.0
+ */
+function folia_the_map() {
+	?>
+	<img src="http://placehold.it/1280x500/f2f2f2/dddddd&text=Mapa" />
+	<?php
+
 }
