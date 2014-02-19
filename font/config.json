@@ -7,9 +7,21 @@
   "ascent": 850,
   "glyphs": [
     {
+      "uid": "0d08dbb1dd648a43bdea81b7e6c9e036",
+      "css": "location",
+      "code": 59402,
+      "src": "fontawesome"
+    },
+    {
       "uid": "de5f0a564ccf8816325330e292e11533",
       "css": "rss",
       "code": 59396,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "9f7e588c66cfd6891f6f507cf6f6596b",
+      "css": "phone",
+      "code": 59403,
       "src": "fontawesome"
     },
     {
@@ -65,6 +77,12 @@
       "css": "search",
       "code": 59401,
       "src": "entypo"
+    },
+    {
+      "uid": "ae3so8q0b0n2h8esv9flua2nmwswa8fd",
+      "css": "mail",
+      "code": 59404,
+      "src": "modernpics"
     }
   ]
 }

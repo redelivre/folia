@@ -21,9 +21,9 @@
 		            </a>
 	            </aside>
 	            <aside class="widget">
-	            	<p><span class="icon-twitter">Rua da Assembleia, 10</span></p>
-	            	<p><span class="icon-twitter"><?php echo antispambot( get_bloginfo( 'admin_email' ) ); ?></span></p>
-	            	<p><span class="icon-twitter tel">0800-655-303</span></p>
+	            	<p><span class="icon-location">Rua da Assembleia, 10</span></p>
+	            	<p><span class="icon-phone tel">0800-655-303</span></p>
+	            	<p><span class="icon-mail"><?php echo antispambot( get_bloginfo( 'admin_email' ) ); ?></span></p>
 	            </aside>
 	            <aside class="widget">
 	            	<h3 class="widget-title">Parceiros</h3>
