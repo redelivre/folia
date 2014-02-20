@@ -140,19 +140,17 @@ function folia_social_networks() {
     // Social networks & RSS feed
 	$social = get_option( 'campanha_social_networks' );
 	if ( isset( $social ) && !empty( $social ) ) : ?>
-		<ul class="social">
+		<div class="social">
 			<?php
 			foreach ( $social as $key => $value ) :
 				if ( ! empty( $value) ) : ?>
-					<li>
-						<a class="social-link icon-<?php echo $key; ?>" href="<?php echo esc_url( $value ); ?>"><span class="screen-reader-text"><?php echo $value; ?></span></a>
-					</li>
+					<a class="social-link icon-<?php echo $key; ?>" href="<?php echo esc_url( $value ); ?>"><span class="screen-reader-text"><?php echo $value; ?></span></a>
 				<?php
 				endif;
 			endforeach;
 			?>
 			<a class="social-link social-link-rss" href="<?php bloginfo( 'rss2_url' ); ?>"><span class="icon icon-rss"></span></a>
-		</ul><!-- .social -->
+		</div><!-- .social -->
 	<?php
 	endif;
 }

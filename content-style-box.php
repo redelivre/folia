@@ -11,7 +11,7 @@
 				<?php if ( has_post_thumbnail() ) : ?>
 					<?php the_post_thumbnail( 'feature-box' ); ?>
 				<?php else : ?>
-					<img src="http://placehold.it/350x263/eeeeee/eeeeeee&text=." class="wp-post-image" />
+					<img src="http://lorempixel.com/g/350/263/abstract" class="wp-post-image" />
 				<?php endif; ?>
 			</div>
 			<header class="entry-header">

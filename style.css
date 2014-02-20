@@ -52,6 +52,7 @@ and Blueprint http://www.blueprintcss.org/
 	Beige: #eaedca;
 	Blue (dark): #0e0e33
 	Blue (light): #b8e9e4
+	Gray: #404040;
 	Pink: #e03352;
 	Yellow: #ffe954;
 
@@ -108,13 +109,13 @@ and Blueprint http://www.blueprintcss.org/
 *,
 *:before,
 *:after {
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-html {
-	background: #fff;
+body {
+	background: #eaedca;
 }
 
 body,
@@ -374,15 +375,11 @@ textarea {
 
 /* Social networks */
 .social {
-	list-style-type: none;
-}
-
-.social li {
-	display: inline;
+	padding: 0;
+	text-align: center;
 }
 
 .social-link {
-	float: left;
 	font-size: 120%;
 	text-decoration: none;
 }
@@ -407,7 +404,6 @@ textarea {
    ========================================================================== */
 
 .site-header {
-	background: #f2f2f2;
 	margin-bottom: 3em;
 	padding: 1.5em 0;
 	text-align: center;
@@ -420,6 +416,9 @@ textarea {
     position: absolute;
 }
 
+.site-header a {
+	color: #404040;
+}
 
 /* ==========================================================================
    4.0 - Content
@@ -509,7 +508,7 @@ textarea {
 
 .widget {
 	font-size: 0.875em;
-	margin: 0 0 1.5em;
+	margin: 0 0 3em;
 }
 
 /* Make sure select elements fit in widgets */
@@ -728,10 +727,11 @@ textarea {
 .updated {
 	display: none;
 }
-.single .byline,
-.group-blog .byline {
+
+.single .byline {
 	display: inline;
 }
+
 .page-content,
 .entry-content,
 .entry-summary {
@@ -834,9 +834,22 @@ object {
    8.0 - Footer
    ========================================================================== */
 .site-footer {
-	background: #eaedca;
+	background: #ed4037;
+	color: #fff;
 	padding: 1.5em 0;
 	text-align: center;
+}
+
+.site-footer a {
+	color: #fff;
+}
+
+.site-footer a:hover {
+	color: #404040;
+}
+
+.site-footer .social-link {
+	font-size: 150%;
 }
 
 .site-info {
@@ -918,6 +931,7 @@ object {
     }
 
     .widget-area--sidebar {
+    	padding-right: 3em;
     	width: 32%;
     }
 
