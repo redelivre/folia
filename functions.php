@@ -137,3 +137,10 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Enable support for oEmbed discovery in Text Widgets
+ *
+ * @since Folia 1.0
+ */
+add_filter( 'widget_text', array( $wp_embed, 'autoembed') );
