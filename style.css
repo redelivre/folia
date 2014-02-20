@@ -49,12 +49,12 @@ and Blueprint http://www.blueprintcss.org/
    ==========================================================================
 	
 	Red: #ed4037
-	Beige: #eaedca;
+	Beige: #dce5d3
 	Blue (dark): #0e0e33
 	Blue (light): #b8e9e4
-	Gray: #404040;
-	Pink: #e03352;
-	Yellow: #ffe954;
+	Gray: #404040
+	Pink: #e03352
+	Yellow: #ffe954
 
 */
 
@@ -115,7 +115,7 @@ and Blueprint http://www.blueprintcss.org/
 }
 
 body {
-	background: #eaedca;
+	background: #dce5d3;
 }
 
 body,
@@ -124,9 +124,8 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 1em;
-	font-weight: 300;
 	line-height: 1.5;
 }
 
@@ -154,6 +153,7 @@ a:active {
 
 /* Text elements */
 h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
 	margin-top: 0;
 }
 
@@ -596,6 +596,7 @@ textarea {
 }
 
 .widget-title {
+	font-weight: normal;
 	text-transform: uppercase;
 }
 
