@@ -317,44 +317,46 @@ textarea {
 	margin-left: .2em;
 }
  
-.icon-rss:before { content: '\e804'; }
+.icon-rss:before {
+	content: '\e804';
+}
 
 .icon-facebook:before,
-.social a[href*="facebook.com"]:before {
+.social-link-facebook:before {
 	content: '\e801';
 }
 
 .icon-flickr:before,
-.social a[href*="flickr.com"]:before {
+.social-link-flickr:before {
 	content: '\e808';
 }
 
 .icon-gplus:before,
-.social a[href*="plus.google.com"]:before {
+.social-link-google:before {
 	content: '\e807';
 }
 
 .icon-instagram:before,
-.social a[href*="instagram.com"]:before {
+.social-link-instagram:before {
 	content: '\e803';
 }
 
 .icon-pinterest:before,
-.social a[href*="pinterest.com"]:before {
+.social-link-pinterest:before {
 	content: '\e800';
 }
 .icon-twitter:before,
-.social a[href*="twitter.com"]:before {
+.social-link-twitter:before {
 	content: '\e802';
 }
 
 .icon-vimeo:before,
-.social a[href*="vimeo.com"]:before {
+.social-link-vimeo:before {
 	content: '\e806';
 }
 
 .icon-youtube:before,
-.social a[href*="youtube.com"]:before {
+.social-link-youtube:before {
 	content: '\e805';
 }
 
@@ -374,6 +376,36 @@ textarea {
 	content: '\e80C';
 }
 
+/* Hover colors */
+.social-link-twitter:hover {
+	color: #00aced;
+}
+
+.social-link-facebook:hover,
+.social-link-facebook-page:hover {
+	color: #3b5998;
+}
+
+.social-link-google:hover {
+	color: #dd4b39;
+}
+
+.social-link-youtube:hover {
+	color: #bb0000;
+}
+
+.social-link-rss:hover {
+	color: #ff6600;
+}
+
+.social-link-pinterest:hover {
+	color: #910101;
+}
+
+.social-link-instagram:hover {
+	color: #4e433c;
+}
+
 /* Social networks */
 .social {
 	padding: 0;
@@ -383,6 +415,11 @@ textarea {
 .social-link {
 	font-size: 120%;
 	text-decoration: none;
+}
+
+.social-link:before {
+	margin: 0;
+	padding: 0;
 }
 
 /* ==========================================================================
@@ -434,7 +471,6 @@ textarea {
 }
 
 .hentry-box {
-	
 	height: 250px;
 	position: relative;
 	overflow: hidden;
@@ -490,6 +526,11 @@ textarea {
 
 .hentry-box-link:hover .wp-post-image {
 	opacity: 1;
+}
+
+/* Facebook comment box */
+.fb-comments, .fb-comments span, .fb-comments.fb_iframe_widget span iframe {
+    width: 100% !important;
 }
 
 /* 
@@ -599,21 +640,29 @@ textarea {
 }
 .main-navigation a {
 	background: #ddd;
+	color: #fff;
 	display: block;
 	padding: 0.5em 1.25em;
 	text-decoration: none;
 }
 
 .main-navigation li a {
-	background: #eee;
+	background: #666;
 }
 
 .main-navigation li:nth-child(odd) a {
-	background: #ddd;
+	background: #404040;
 }
 
 .main-navigation li a:hover {
 	background: #ed4037;
+	color: #fff;
+}
+
+.main-navigation .current_page_item a,
+.main-navigation .current-menu-item a {
+	background: #ed4037;
+	border-bottom: 5px solid #ed4037;
 	color: #fff;
 }
 
@@ -642,9 +691,6 @@ textarea {
 }
 .main-navigation ul li:hover > ul {
 	display: block;
-}
-.main-navigation .current_page_item a,
-.main-navigation .current-menu-item a {
 }
 
 .site-main .comment-navigation,
@@ -886,27 +932,35 @@ object {
 	color: #404040;
 }
 
+.site-footer .site-logo {
+	border-bottom: 1px solid #fff;
+	display: block;
+	padding-bottom: 1em;
+}
+
+.site-footer .social {
+	padding-top: 1em;
+	text-align: left;
+}
+
 .site-footer .social-link {
-	font-size: 150%;
+	font-size: 115%;
 }
 
 .site-footer .social-link:hover {
 	border: 0;
 }
 
+.site-location,
 .site-info {
 	font-size: 0.875em;
 }
 
-.widget-area--footer + .site-info {
+.site-info {
 	padding-top: 1.5em;
 	border-style: solid;
 	border-width: 1px 0 0;
 	border-color: #fff;
-}
-
-.fb-comments, .fb-comments span, .fb-comments.fb_iframe_widget span iframe {
-    width: 100% !important;
 }
 
 /* ==========================================================================
@@ -940,9 +994,10 @@ object {
 	}
 
 	/* Widget area */
-	.widget-area--footer .widget {
+	.widget-area--footer .widget,
+	.site-location p {
 		float: left;
-		padding: 1em;
+		padding-right: 1em;
 		width: 33.333%;
 	}
 
@@ -1007,16 +1062,18 @@ object {
 	}
 
 	/* Widget area */
-	.widget-area--footer .widget:nth-child(-n+2) {
+	.widget-area--footer .widget:nth-child(-n+2),
+	.site-location p:nth-child(-n+2) {
 		width: 25%;
 	}
 
-	.widget-area--footer .widget:nth-child(3) {
+	.widget-area--footer .widget:nth-child(3),
+	.site-location p:nth-child(3) {
 		width: 50%;
 	}
 
 	/* Footer */
-	.site-logo {
-		max-width: 85%;
+	.site-footer .site-logo {
+		max-width: 45%;
 	}
 }

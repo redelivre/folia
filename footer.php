@@ -15,28 +15,31 @@
 		<div class="container">
 			<div id="tertiary" class="widget-area widget-area--footer clear" role="complementary">
 	            <aside class="widget clear">
-	            	<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-		                <img class="site-logo" src="<?php echo get_template_directory_uri() . '/images/logo.png'; ?>" alt="Logo <?php bloginfo ( 'name' ); ?>" />
-		                <?php folia_social_networks(); ?>
-		            </a>
+	            	<div class="site-branding--footer">
+		            	<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			                <img class="site-logo" src="<?php echo get_template_directory_uri() . '/images/logo-picnic.png'; ?>" alt="Logo <?php bloginfo ( 'name' ); ?>" />
+			            </a>
+			            <?php folia_social_networks(); ?>
+		        	</div>
 	            </aside>
 	            <aside class="widget clear">
-	            	<p><span class="icon-location">Rua da Assembleia, 10</span></p>
-	            	<p><span class="icon-phone tel">0800-655-303</span></p>
-	            	<p><span class="icon-mail"><?php echo antispambot( get_bloginfo( 'admin_email' ) ); ?></span></p>
+	            	<h3 class="widget-title">Apoio</h3>
+	            	<img src="<?php echo get_template_directory_uri() . '/images/logo-apoios.png'; ?>" alt="Logo <?php bloginfo ( 'name' ); ?>" />
 	            </aside>
 	            <aside class="widget clear">
 	            	<h3 class="widget-title">Parceiros</h3>
-	            	<img src="http://placehold.it/100" />
-	            	<img src="http://placehold.it/100" />
-	            	<img src="http://placehold.it/100" />
-	            	<img src="http://placehold.it/100" />
+	            	<img src="<?php echo get_template_directory_uri() . '/images/logo-patrocinios.png'; ?>" alt="Logo <?php bloginfo ( 'name' ); ?>" />
 	            </aside>
 	        </div><!-- .widget-area--footer -->
+
+	        <div class="site-location clear">
+		        <p><span class="icon-location">Rua da Assembleia, 10</span></p>
+	        	<p><span class="icon-phone tel">0800-655-303</span></p>
+	        	<p><span class="icon-mail"><?php echo antispambot( get_bloginfo( 'admin_email' ) ); ?></span></p>
+        	</div>
+
 			<div class="site-info">
-				<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'folia' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-				<?php printf( __( 'Theme: %1$s by %2$s.', 'folia' ), 'Folia', '<a href="http://ethymos.com.br" rel="designer">Ethymos</a>' ); ?>
+				<a href="<?php echo home_url( '/' ); ?>">Mapa da Folia, 2014</a>
 			</div><!-- .site-info -->
 		</div><!-- .container -->
 	</footer><!-- #colophon -->

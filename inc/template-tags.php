@@ -155,12 +155,12 @@ function folia_social_networks() {
 			<?php
 			foreach ( $social as $key => $value ) :
 				if ( ! empty( $value) ) : ?>
-					<a class="social-link icon-<?php echo $key; ?>" href="<?php echo esc_url( $value ); ?>"><span class="screen-reader-text"><?php echo $value; ?></span></a>
+					<a class="social-link social-link-<?php echo $key; ?> icon-<?php echo $key; ?>" href="<?php echo esc_url( $value ); ?>"><span class="screen-reader-text"><?php echo $value; ?></span></a>
 				<?php
 				endif;
 			endforeach;
 			?>
-			<a class="social-link social-link-rss" href="<?php bloginfo( 'rss2_url' ); ?>"><span class="icon icon-rss"></span></a>
+			<a class="social-link icon-rss social-link-rss" href="<?php bloginfo( 'rss2_url' ); ?>"><span class="screen-reader-text"><?php _e('RSS Feed', 'folia' ); ?></span></a>
 		</div><!-- .social -->
 	<?php
 	endif;
