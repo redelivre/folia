@@ -146,3 +146,19 @@ require get_template_directory() . '/inc/jetpack.php';
  * @since Folia 1.0
  */
 add_filter( 'widget_text', array( $wp_embed, 'autoembed') );
+
+function folia_facebook_connect() {
+	?>
+	<div id="fb-root"></div>
+		<script>
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=268237716675725";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+	<?php
+}
+add_filter( 'wp_footer', 'folia_facebook_connect' );
