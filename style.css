@@ -429,11 +429,23 @@ textarea {
 }
 
 .hentry-box {
+	
+	height: 250px;
 	position: relative;
 	overflow: hidden;
 }
 
+.hentry-box-link {
+	background: rgba(0, 0, 0, 0.4);
+	display: block;
+	height: 100%;
+	position: relative;
+	width: 100%;
+	z-index: 9;
+}
+
 .hentry-box .entry-title {
+	color: #fff;
 	font-size: 1.25em;
 	line-height: 1.2;
 }
@@ -443,11 +455,13 @@ textarea {
 }
 
 .hentry-box .entry-header {
+	color: #fff;
 	padding: 1.5em;
 	position: absolute;
 		left: 50%;
 		top: 50%;
 	text-align: center;
+	text-shadow: 0 0 1px rgba(0,0,0,0.8);
 	width: 100%;
 
 	transform: translate(-50%, -50%);
@@ -456,7 +470,21 @@ textarea {
 }
 
 .hentry-box .wp-post-image {
+	height: 100%;
+	opacity: 0.4;
+	position: absolute;
+		left: 0;
+		top: 0;
 	width: 100%;
+
+	-webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}
+
+.hentry-box-link:hover .wp-post-image {
+	opacity: 1;
 }
 
 /* 
@@ -942,6 +970,12 @@ object {
 
 	/* Box styles */
 	.hentry-box {
+		height: 195px;
+		width: 25%;
+	}
+
+	.hentry-box:nth-child(-n+4) {
+		height: 259px;
 		width: 33.333%;
 	}
 

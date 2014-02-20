@@ -14,11 +14,12 @@
 					<img src="http://lorempixel.com/g/350/263/abstract" class="wp-post-image" />
 				<?php endif; ?>
 			</div>
+			
 			<header class="entry-header">
-				<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+				<h1 class="entry-title"><?php the_title(); ?></h1>
 				<?php if ( 'post' == get_post_type() ) : ?>
 				<div class="entry-meta">
-					<?php folia_posted_on(); ?>
+					<?php folia_posted_on( true ); ?>
 				</div><!-- .entry-meta -->
 				<?php endif; ?>
 			</header><!-- .entry-header -->
