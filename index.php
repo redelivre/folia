@@ -17,7 +17,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php if ( get_query_var( 'paged' ) < 2 ) : ?>
-				<div class="map"><?php folia_the_map(); ?></div>
+				<div class="map clear"><?php folia_the_map(); ?></div>
 			<?php endif; ?>
 
 			<?php if ( have_posts() ) : ?>

@@ -172,8 +172,10 @@ function folia_social_networks() {
  * @since Folia 1.0
  */
 function folia_the_map() {
-	?>
-	<img src="http://placehold.it/1280x500/f2f2f2/dddddd&text=Mapa" />
-	<?php
+	
+	if(function_exists('mapasdevista_view'))
+	{
+		mapasdevista_view();
+	}
 
 }
