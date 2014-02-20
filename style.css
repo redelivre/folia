@@ -470,6 +470,10 @@ textarea {
 	margin-bottom: 3em;
 }
 
+.entry-meta {
+	font-size: 0.875em;
+}
+
 .hentry-box {
 	height: 250px;
 	position: relative;
@@ -489,10 +493,6 @@ textarea {
 	color: #fff;
 	font-size: 1.25em;
 	line-height: 1.2;
-}
-
-.hentry-box .entry-meta {
-	font-size: 0.875em;
 }
 
 .hentry-box .entry-header {
@@ -546,6 +546,12 @@ textarea {
 	word-wrap: break-word;
 }
 
+.page .entry-title {
+	color: #ed4037;
+	font-size: 1.75em;
+	text-transform: uppercase;
+}
+
 .entry-content .wp-post-image,
 .entry-summary .wp-post-image {
 	margin-bottom: 1.5em;
@@ -555,6 +561,11 @@ textarea {
 	font-style: italic;
 }
 
+/* Area Title (works as a Widget Title) */
+.area-title {
+	color: #ed4037;
+}
+
 /* 
    4.9 - Archives
    ========================================================================== */
@@ -562,10 +573,6 @@ textarea {
 .archive .hentry,
 .search .hentry {
 	padding: 1.5em;
-}
-
-.archive .hentry {
-	background: beige;
 }
 
 /* 
@@ -588,11 +595,6 @@ textarea {
 /* Make sure select elements fit in widgets */
 .widget select {
 	max-width: 100%;
-}
-
-/* Search widget */
-.widget_search .search-submit {
-	display: none;
 }
 
 .widget-title {
@@ -643,7 +645,8 @@ textarea {
 	background: #ddd;
 	color: #fff;
 	display: block;
-	padding: 0.5em 1.25em;
+	font-size: 0.875em;
+	padding: 0.75em 1.5em;
 	text-decoration: none;
 }
 
