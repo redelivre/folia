@@ -148,6 +148,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
+	border-bottom: 1px dotted #404040;
 	color: #ed4037;
 }
 
@@ -418,6 +419,10 @@ textarea {
 
 .site-header a {
 	color: #404040;
+}
+
+.site-header a:hover {
+	border: 0;
 }
 
 /* ==========================================================================
@@ -811,17 +816,20 @@ textarea {
 	margin-top: 0;
 	padding: 0;
 }
+
 .wp-caption {
-	border: 1px solid #ccc;
 	margin-bottom: 1.5em;
 	max-width: 100%;
 }
+
 .wp-caption img[class*="wp-image-"] {
 	display: block;
 	margin: 1.2% auto 0;
 	max-width: 98%;
 }
+
 .wp-caption-text {
+	font-size: 0.875em;
 	text-align: center;
 }
 .wp-caption .wp-caption-text {
@@ -880,6 +888,10 @@ object {
 	font-size: 150%;
 }
 
+.site-footer .social-link:hover {
+	border: 0;
+}
+
 .site-info {
 	font-size: 0.875em;
 }
@@ -889,6 +901,10 @@ object {
 	border-style: solid;
 	border-width: 1px 0 0;
 	border-color: #fff;
+}
+
+.fb-comments, .fb-comments span, .fb-comments.fb_iframe_widget span iframe {
+    width: 100% !important;
 }
 
 /* ==========================================================================
@@ -954,13 +970,22 @@ object {
         float: right;
     }
 
+    .single .content-area,
+    .single .widget-area--sidebar {
+        float: left;
+    }
+
     .content-area {
     	width: 68%;
     }
 
     .widget-area--sidebar {
-    	padding-right: 3em;
+    	padding: 0 3em 0 0;
     	width: 32%;
+    }
+
+    .single .widget-area--sidebar {
+    	padding: 0 0 0 3em;
     }
 
     /* Full width pages */
@@ -974,7 +999,7 @@ object {
 		width: 25%;
 	}
 
-	.hentry-box:nth-child(-n+4) {
+	.hentry-box:nth-child(-n+3) {
 		height: 259px;
 		width: 33.333%;
 	}
