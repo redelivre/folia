@@ -663,7 +663,7 @@ textarea {
 	color: #fff;
 }
 
-.main-navigation .current_page_item a {
+.main-navigation li.current_page_item a {
 	background: #ed4037;
 	color: #fff;
 }
