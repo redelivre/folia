@@ -663,10 +663,8 @@ textarea {
 	color: #fff;
 }
 
-.main-navigation .current_page_item a,
-.main-navigation .current-menu-item a {
+.main-navigation .current_page_item a {
 	background: #ed4037;
-	border-bottom: 5px solid #ed4037;
 	color: #fff;
 }
 
