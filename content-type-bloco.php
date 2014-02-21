@@ -11,7 +11,7 @@
 			the_post_thumbnail( 'thumbnail-small' );
 		else :
 		?>
-			<img class="wp-post-image" src="http://placehold.it/75" />
+			<img class="wp-post-image" src="http://placehold.it/75&text=Logo" />
 		<?php endif; ?>
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 

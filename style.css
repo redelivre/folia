@@ -548,7 +548,7 @@ textarea {
 
 .page .entry-title {
 	color: #ed4037;
-	font-size: 1.75em;
+	font-size: 1.5em;
 	text-transform: uppercase;
 }
 
@@ -994,6 +994,8 @@ object {
 	/* Box styles */
 	.hentry-box {
 		float: left;
+		margin-bottom: 1em;
+		padding: 0.125em;
 		width: 50%;
 	}
 
