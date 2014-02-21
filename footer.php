@@ -22,24 +22,24 @@
 			            <?php folia_social_networks(); ?>
 		        	</div>
 	            </aside>
-	            <aside class="widget clear">
+	            <aside class="widget widget-apoios clear">
 	            	<h3 class="widget-title">Apoio</h3>
 	            	<img src="<?php echo get_template_directory_uri() . '/images/logo-apoios.png'; ?>" alt="Logo <?php bloginfo ( 'name' ); ?>" />
 	            </aside>
-	            <aside class="widget clear">
+	            <aside class="widget widget-patrocinios clear">
 	            	<h3 class="widget-title">Parceiros</h3>
 	            	<img src="<?php echo get_template_directory_uri() . '/images/logo-patrocinios.png'; ?>" alt="Logo <?php bloginfo ( 'name' ); ?>" />
 	            </aside>
 	        </div><!-- .widget-area--footer -->
 
 	        <div class="site-location clear">
-		        <p><span class="icon-location">Rua da Assembleia, 10</span></p>
-	        	<p><span class="icon-phone tel">0800-655-303</span></p>
-	        	<p><span class="icon-mail"><?php echo antispambot( get_bloginfo( 'admin_email' ) ); ?></span></p>
+		        <span class="icon-location">Rua Antônio Torres, 103 | Sagrada Família | CEP 31030-130</span>
+	        	<span class="icon-phone tel">+55 31 3309-6558</span>
+	        	<span class="icon-mail"><a href="mailto:<?php echo antispambot( 'contato@picnicdigital.com.br' ); ?>"><?php echo antispambot( 'contato@picnicdigital.com.br' ); ?></a></span>
         	</div>
 
 			<div class="site-info">
-				<a href="<?php echo home_url( '/' ); ?>">Mapa da Folia, 2014</a>
+				<a href="<?php echo home_url( '/' ); ?>">Mapa da Folia &bull; 2014</a>
 			</div><!-- .site-info -->
 		</div><!-- .container -->
 	</footer><!-- #colophon -->

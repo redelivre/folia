@@ -95,7 +95,7 @@ function folia_scripts() {
 	wp_enqueue_style( 'folia-style', get_stylesheet_uri() );
 
 	// Google Fonts
-    wp_register_style( 'folia-fonts', 'http://fonts.googleapis.com/css?family=Roboto:400italic,400,700,700italic', array() );
+    wp_register_style( 'folia-fonts', 'http://fonts.googleapis.com/css?family=Roboto:300italic,300,700,700italic', array() );
     wp_enqueue_style( 'folia-fonts' );
 
 	// FitVids
