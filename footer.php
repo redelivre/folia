@@ -27,7 +27,7 @@
 	            	<img src="<?php echo get_template_directory_uri() . '/images/logo-apoios.png'; ?>" alt="Logo <?php bloginfo ( 'name' ); ?>" />
 	            </aside>
 	            <aside class="widget widget-patrocinios clear">
-	            	<h3 class="widget-title">Parceiros</h3>
+	            	<h3 class="widget-title">Patrocínio</h3>
 	            	<img src="<?php echo get_template_directory_uri() . '/images/logo-patrocinios.png'; ?>" alt="Logo <?php bloginfo ( 'name' ); ?>" />
 	            </aside>
 	        </div><!-- .widget-area--footer -->
