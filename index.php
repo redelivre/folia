@@ -23,7 +23,7 @@ get_header(); ?>
 
 			<?php if ( have_posts() ) : ?>
 
-				<h3 class="area-title"><?php _e( 'Últimas notícias', 'folia' ); ?></h3>
+				<h3 class="area-title"><?php _e( 'Últimos batuques', 'folia' ); ?></h3>
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
