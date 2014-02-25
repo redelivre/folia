@@ -144,6 +144,11 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ * Add suport for Facebook Connect
+ *
+ * @since Folia 1.0
+ */
 function folia_facebook_connect() {
 	?>
 	<div id="fb-root"></div>
