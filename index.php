@@ -18,6 +18,7 @@ get_header(); ?>
 
 			<?php if ( get_query_var( 'paged' ) < 2 ) : ?>
 				<div class="map clear"><?php folia_the_map(); ?></div>
+				<div class="map-filters clear"><?php folia_the_map_filters(); ?></div>
 			<?php endif; ?>
 
 			<?php if ( have_posts() ) : ?>

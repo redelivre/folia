@@ -179,3 +179,36 @@ function folia_the_map() {
 	}
 
 }
+
+/**
+ * Display the map filters
+ *
+ * @since Folia 1.0
+ */
+function folia_the_map_filters() {
+	
+	if(function_exists('mapasdevista_view'))
+	{
+		?>
+		<div id="map-filters">
+		<?php
+			mapasdevista_view_filters('filter', array('data'));
+		?>
+			<div id="filter-link-to-map" class="filter-link-to-map" ><a href="<?php echo get_bloginfo('url').'/mapa'; ?>">Veja o mapa completo</a></div>
+		</div>
+		<?php
+	} 
+}
+
+function folia_mapasdevista_filters_label($label)
+{
+	$ikey = filter_var($label, FILTER_SANITIZE_NUMBER_INT);
+	if(intval($ikey) > 0)
+	{
+		return substr($ikey, 0, 2).'/'.substr($ikey, 2);// TODO arrumar um jeito de definir para datas
+	}
+	return $label;
+}
+add_filter('mapasdevista_filters_label', 'folia_mapasdevista_filters_label');
+
+?>
