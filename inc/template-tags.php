@@ -83,7 +83,7 @@ function folia_posted_on( $plain = false ) {
 	);
 
 	if ( $plain === true ) {
-		printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'folia' ),
+		printf( __( '<span class="posted-on">Publicado em %1$s</span><span class="byline"> por %2$s</span>', 'folia' ),
 			$time_string,
 			sprintf( '<span class="author vcard">%s</span>',
 				esc_html( get_the_author() )
@@ -92,7 +92,7 @@ function folia_posted_on( $plain = false ) {
 
 	}
 	else {
-		printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'folia' ),
+		printf( __( '<span class="posted-on">Publicado em %1$s</span><span class="byline"> por %2$s</span>', 'folia' ),
 			sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 				esc_url( get_permalink() ),
 				$time_string
@@ -164,6 +164,17 @@ function folia_social_networks() {
 		</div><!-- .social -->
 	<?php
 	endif;
+}
+
+/**
+ * Add social sharing
+ *
+ * @since Folia 1.0
+ */
+function folia_share() {
+	?>
+	<div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+	<?php
 }
 
 /**
