@@ -133,6 +133,7 @@ textarea {
 a {
 	color: #ed4037;
 	text-decoration: none;
+	word-wrap: break-word;
 
 	-webkit-transition: all 0.25s ease-out;
     -moz-transition: all 0.25s ease-out;
@@ -413,7 +414,7 @@ textarea {
 }
 
 .social-link {
-	font-size: 120%;
+	font-size: 160%;
 	text-decoration: none;
 }
 
@@ -454,12 +455,20 @@ textarea {
     position: absolute;
 }
 
+.site-header .site-logo {
+	margin-bottom: 1.5em;
+}
+
 .site-header a {
 	color: #404040;
 }
 
 .site-header a:hover {
 	border: 0;
+}
+
+.site-header .search-form { 
+	margin-bottom: 1.5em;
 }
 
 /* ==========================================================================
@@ -533,6 +542,11 @@ textarea {
     width: 100% !important;
 }
 
+/* Area Title (works as a Widget Title) */
+.area-title {
+	color: #ed4037;
+}
+
 /* 
    4.1 - Entry header
    ========================================================================== */
@@ -552,6 +566,10 @@ textarea {
 	text-transform: uppercase;
 }
 
+.entry-share {
+	margin: 1em 0;
+}
+
 .entry-content .wp-post-image,
 .entry-summary .wp-post-image {
 	margin-bottom: 1.5em;
@@ -559,11 +577,6 @@ textarea {
 
 .singular .entry-summary {
 	font-style: italic;
-}
-
-/* Area Title (works as a Widget Title) */
-.area-title {
-	color: #ed4037;
 }
 
 /* 
@@ -611,7 +624,7 @@ textarea {
 }
 
 .main-navigation {
-	margin-top: 3em;
+	margin-top: 1.5em;
 	text-transform: uppercase;
 }
 
@@ -630,7 +643,9 @@ textarea {
 	clear: both;
 	display: block;
 	float: left;
+	width: 100%;
 }
+
 .main-navigation ul {
 	display: none;
 	list-style: none;
@@ -722,6 +737,7 @@ textarea {
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
+	max-width: 100%;
 }
 
 .screen-reader-text:hover,
@@ -1059,10 +1075,7 @@ object {
    ========================================================================== */
 
 @media all and (min-width: 36em) {
-	.site-header {
-		text-align: left;
-	}
-
+	
 	/* Site menu */
 	.menu-toggle {
 		cursor: pointer;
@@ -1127,7 +1140,17 @@ object {
 	/* Site Header */
 	.site-branding {
 		float: left;
+		margin-right: 1em;
 		max-width: 12.5%;
+	}
+
+	/* Site header */
+	.site-header .social {
+		text-align: left;
+	}
+
+	.site-header .social-link {
+		font-size: 120%;
 	}
 
 	.site-header .search-form {

@@ -17,6 +17,10 @@
 		<div class="entry-meta">
 			<?php folia_posted_on(); ?>
 		</div><!-- .entry-meta -->
+		
+		<div class="entry-share">
+			<?php folia_share(); ?>
+		</div><!-- .entry-share -->
 	</header><!-- .entry-header -->
 
 	<?php if ( has_post_thumbnail() ) : ?>
