@@ -923,19 +923,19 @@ object {
 	margin: 0;
 	padding:0px;
 	list-style:none;
-	display: inline;
 }
 
 #map-filters #filters ul li {
 	display: inline-block;
+	width: 100%;
 }
 
 #map-filters #filters ul li {
 	background-color: #eaedca;
 }
 
-#map-filters #filters ul li ul {
-	
+#map-filters #filters ul li ul li {
+	width: auto;
 }
 
 #map-filters #filters ul li ul li:nth-child(odd) {
@@ -976,8 +976,28 @@ object {
 	width: 17%;
 }
 
+#map-filters .filter-cycle-button {
+	float:left;
+	width: 3%;
+	height: 34px;
+}
+
+#map-filters .filter-cycle-next {
+	background-image: url("images/dir.png");
+	background-size: auto 34px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#map-filters .filter-cycle-prev {
+	background-image: url("images/esq.png");
+	background-size: auto 34px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
 #map-filters #filters {
-	width: 83%;
+	width: 76%;
 	float: left;
 	font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #ed4037;

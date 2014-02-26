@@ -191,13 +191,28 @@ function folia_the_map_filters() {
 	{
 		?>
 		<div id="map-filters">
+			<div id="filter-cycle-prev" class="filter-cycle-prev cycle-prev filter-cycle-button" ></div>
 		<?php
 			mapasdevista_view_filters('filter', array('data'));
 		?>
+			<div id="filter-cycle-next" class="filter-cycle-next cycle-next filter-cycle-button" ></div>
 			<div id="filter-link-to-map" class="filter-link-to-map" ><a href="<?php echo get_bloginfo('url').'/mapa'; ?>">Veja o mapa completo</a></div>
 		</div>
 		<?php
-	} 
+	}
+}
+
+add_action('wp_enqueue_scripts', 'folia_map_scritps');
+
+function folia_map_scritps()
+{
+	if(is_home() && function_exists('mapasdevista_view'))
+	{
+		wp_enqueue_script('jquery-cycle2', get_template_directory_uri() . '/js/jquery.cycle2.min.js', array('jquery'));
+		wp_enqueue_script('jquery-cycle2-carousel', get_template_directory_uri() . '/js/jquery.cycle2.carousel.min.js', array('jquery-cycle2'));
+		wp_enqueue_script('jquery-cycle2-swipe', get_template_directory_uri() . '/js/jquery.cycle2.swipe.min.js', array('jquery-cycle2'));
+		wp_enqueue_script('map_filters_scroller', get_template_directory_uri() . '/js/map_filters_scroller.js', array('jquery-cycle2'));
+	}
 }
 
 function folia_mapasdevista_filters_label($label)
