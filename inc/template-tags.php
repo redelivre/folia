@@ -217,7 +217,7 @@ add_action('wp_enqueue_scripts', 'folia_map_scritps');
 
 function folia_map_scritps()
 {
-	if(is_home() && function_exists('mapasdevista_view'))
+	if(function_exists('mapasdevista_view') && !get_query_var('mapa-tpl'))
 	{
 		wp_enqueue_script('jquery-cycle2', get_template_directory_uri() . '/js/jquery.cycle2.min.js', array('jquery'));
 		wp_enqueue_script('jquery-cycle2-carousel', get_template_directory_uri() . '/js/jquery.cycle2.carousel.min.js', array('jquery-cycle2'));
