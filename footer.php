@@ -39,7 +39,7 @@
         	</div>
 
 			<div class="site-info">
-				<a href="<?php echo home_url( '/' ); ?>">Mapa da Folia &bull; 2014</a>
+				<a href="<?php echo home_url( '/' ); ?>">Mapa da Folia &bull; <?php echo date('Y'); ?></a>
 			</div><!-- .site-info -->
 		</div><!-- .container -->
 	</footer><!-- #colophon -->
