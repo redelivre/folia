@@ -14,6 +14,10 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
 			<div id="tertiary" class="widget-area widget-area--footer clear" role="complementary">
+	            <aside class="widget widget-patrocinios clear">
+	            	<h3 class="widget-title">Patrocínio</h3>
+	            	<img src="<?php echo get_template_directory_uri() . '/images/logo-patrocinios.png'; ?>" alt="Logo <?php bloginfo ( 'name' ); ?>" />
+	            </aside>
 	            <aside class="widget clear">
 	            	<div class="site-branding--footer">
 		            	<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
@@ -21,14 +25,6 @@
 			            </a>
 			            <?php folia_social_networks(); ?>
 		        	</div>
-	            </aside>
-	            <aside class="widget widget-apoios clear">
-	            	<h3 class="widget-title">Apoio</h3>
-	            	<img src="<?php echo get_template_directory_uri() . '/images/logo-apoios.png'; ?>" alt="Logo <?php bloginfo ( 'name' ); ?>" />
-	            </aside>
-	            <aside class="widget widget-patrocinios clear">
-	            	<h3 class="widget-title">Patrocínio</h3>
-	            	<img src="<?php echo get_template_directory_uri() . '/images/logo-patrocinios.png'; ?>" alt="Logo <?php bloginfo ( 'name' ); ?>" />
 	            </aside>
 	        </div><!-- .widget-area--footer -->
 

@@ -1130,18 +1130,17 @@ object {
 		margin-top: 5em;
 	}
 
-	.widget-area--footer .widget-patrocinios img {
-		max-width: 80%;
-	}
-
 	/* Footer */
 	.site-footer {
 		text-align: left;
 	}
 
+	.site-branding--footer {
+		float: right;	
+	}
+
 	.site-footer .site-logo {
 		margin: 0;
-		max-width: 45%;
 	}
 	
 	.site-footer .social {
@@ -1219,12 +1218,7 @@ object {
 		width: 33.333%;
 	}
 
-	/* Widget area */
-	.widget-area--footer .widget:nth-child(-n+2) {
-		width: 25%;
-	}
-
-	.widget-area--footer .widget:nth-child(3) {
+	.widget.widget-patrocinios.clear {
 		width: 50%;
 	}
 
